@@ -21,8 +21,8 @@ function events(){
 
 function set(){
     if(flag==0){
-  this.innerHTML='X';
-  flag=1;
+    this.innerHTML='X';
+     flag=1;
     } 
     else if(flag==1){
         this.innerHTML=0;
@@ -44,21 +44,7 @@ function set(){
         arr6.push(this.innerHTML);
         arr8.push(this.innerHTML);
         if(arr1.length==3){
-            var c1=0;
-            var c2=0;
-            for(let i of arr1){
-                if(i=="X")
-                c1+=1;
-                else{
-                    c2+=1;
-                }
-            }
-            if(c1==3){
-                print();
-            }
-            else if(c2==3){
-                print();
-            }
+            check(arr1);
         }
     }
     else if(result=="three"){
@@ -76,21 +62,7 @@ function set(){
         arr2.push(this.innerHTML);
         arr6.push(this.innerHTML);
         if(arr2.length==3){
-            var c1=0;
-            var c2=0;
-            for(let i of arr2){
-                if(i=="X")
-                c1+=1;
-                else{
-                    c2+=1;
-                }
-            }
-            if(c1==3){
-                print();
-            }
-            else if(c2==3){
-                print();
-            }
+            check(arr2);
         }
 
     }
@@ -98,40 +70,12 @@ function set(){
         arr3.push(this.innerHTML);
         arr4.push(this.innerHTML);
         if(arr4.length==3){
-            var c1=0;
-            var c2=0;
-            for(let i of arr4){
-                if(i=="X")
-                c1+=1;
-                else{
-                    c2+=1;
-                }
-            }
-            if(c1==3){
-                print();
-            }
-            else if(c2==3){
-                print();
-            }
+            check(arr4);
         }
         
         arr8.push(this.innerHTML);
          if(arr8.length==3){
-            var c1=0;
-            var c2=0;
-            for(let i of arr8){
-                if(i=="X")
-                c1+=1;
-                else{
-                    c2+=1;
-                }
-            }
-            if(c1==3){
-                print();
-            }
-            else if(c2==3){
-                print();
-            }
+            check(arr8);
         }
 
     }
@@ -139,84 +83,45 @@ function set(){
         arr3.push(this.innerHTML);
         arr5.push(this.innerHTML);
         if(arr5.length==3){
-            var c1=0;
-            var c2=0;
-            for(let i of arr5){
-                if(i=="X")
-                c1+=1;
-                else{
-                    c2+=1;
-                }
-            }
-            if(c1==3){
-                print();
-            }
-            else if(c2==3){
-                print();
-            }
+            check(arr5);
         }
 
     }
     else if(result=="eight"){
         arr3.push(this.innerHTML);
         if(arr3.length==3){
-            var c1=0;
-            var c2=0;
-            for(let i of arr3){
-                if(i=="X")
-                c1+=1;
-                else{
-                    c2+=1;
-                }
-            }
-            if(c1==3){
-                print();
-            }
-            else if(c2==3){
-                print();
-            }
+            check(arr3);
         }
         arr6.push(this.innerHTML);
         if(arr6.length==3){
-            var c1=0;
-            var c2=0;
-            for(let i of arr6){
-                if(i=="X")
-                c1+=1;
-                else{
-                    c2+=1;
-                }
-            }
-            if(c1==3){
-                print();
-            }
-            else if(c2==3){
-                print();
-            }
+            check(arr6);
         }
         
         arr7.push(this.innerHTML);
             if(arr7.length==3){
-            var c3=0;
-            var c4=0;
-            for(let i of arr7){
-                if(i=="X")
-                c3+=1;
-                else{
-                    c4+=1;
-                }
-            }
-            if(c3==3){
-                print();
-            }
-            else if(c4==3){
-                print();
-            }
+            check(arr7);
             
         }
 
     }
 
+}
+function check(arr){
+    var c1=0;
+    var c2=0;
+        for(let i of arr){
+            if(i=="X")
+            c1+=1;
+            else{
+            c2+=1;
+            }
+        }
+        if(c1==3){
+            print();
+        }
+        else if(c2==3){
+            print();
+        }
 }
 function print(){
     document.querySelector("h2").innerHTML="GAME OVER";
